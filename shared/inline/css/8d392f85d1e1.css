@@ -11,6 +11,24 @@
                                 padding-right: 16px;
                             }
 
+                            .navbar_wrapper {
+                                transition: transform 240ms ease, opacity 240ms ease !important;
+                                will-change: transform, opacity;
+                            }
+
+                            body[data-navbar-visible="false"] .navbar_wrapper {
+                                transform: translateY(calc(-100% - 1rem));
+                                opacity: 0;
+                                pointer-events: none;
+                            }
+
+                            body[data-navbar-visible="true"] .navbar_wrapper,
+                            body[data-menu-visible="true"] .navbar_wrapper {
+                                transform: translateY(0);
+                                opacity: 1;
+                                pointer-events: auto;
+                            }
+
                             body[data-scrolled="true"] .navbar_logo {
                                 color: var(--_primitives---colors--clay);
                             }
