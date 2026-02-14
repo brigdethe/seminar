@@ -216,7 +216,8 @@
                                 Independence Avenue, Accra<br />
                             </h2>
 
-                            <a data-w-id="3dd6a57a-3f04-405a-5c4f-0b9f95213c6c" href="/about/"
+                            <a id="homeSpeakersButton" data-w-id="3dd6a57a-3f04-405a-5c4f-0b9f95213c6c"
+                                href="#team-section"
                                 class="button is-icon w-inline-block">
                                 <div>Speakers</div>
                                 <div class="icon-button">
@@ -246,7 +247,6 @@
                                     </div>
                                 </div>
                             </a>
-                            <link rel="prefetch" href="/about/" />
                         </div>
                     </div>
                 </div>
@@ -622,6 +622,22 @@
         document.addEventListener('DOMContentLoaded', function () {
             const teamSection = document.querySelector('.section.team');
             if (!teamSection) return;
+            const speakersButton = document.getElementById('homeSpeakersButton');
+
+            if (speakersButton) {
+                speakersButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    const navbar = document.getElementById('navbar');
+                    const navHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+                    const targetY = window.pageYOffset + teamSection.getBoundingClientRect().top - navHeight - 12;
+
+                    window.scrollTo({
+                        top: Math.max(0, targetY),
+                        behavior: 'smooth'
+                    });
+                });
+            }
 
             const modalComponent = teamSection.querySelector('.team_modal_component');
             const modalPanel = teamSection.querySelector('.team_modal-content_wrapper');
