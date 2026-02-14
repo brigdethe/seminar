@@ -1,4 +1,4 @@
-const path = require('path');
+﻿const path = require('path');
 const express = require('express');
 
 const app = express();
@@ -8,8 +8,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (_req, res) => res.render('pages/home'));
-app.get('/about', (_req, res) => res.render('pages/about'));
-app.get('/services', (_req, res) => res.render('pages/services'));
 app.get('/contact', (_req, res) => res.render('pages/contact'));
 
 app.use(express.static(__dirname, { index: false }));
@@ -17,3 +15,4 @@ app.use(express.static(__dirname, { index: false }));
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
