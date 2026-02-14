@@ -154,8 +154,225 @@
                     </div>
                 </div>
             </section>
-            
+            <section class="section footer-mirror">
+                <div class="w-embed">
+                    <style>
+                        .footer-mirror {
+                            height: var(--footer-mirror-height, 720px);
+                            background-color: #f8f2e8;
+                            display: flex;
+                            align-items: stretch;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;
+                        }
+
+                        .footer-mirror .padding-global {
+                            width: 100%;
+                            height: 100%;
+                            padding: 0;
+                        }
+
+                        .footer-mirror__grid {
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: repeat(2, minmax(0, 1fr));
+                            gap: 0;
+                            align-items: stretch;
+                            height: 100%;
+                        }`r`n
+                        .footer-mirror__column {
+                            width: 100%;
+                            height: 100%;
+                            background: #fff;
+                        }
+
+                        .footer-mirror__column--left {
+                            display: flex;
+                            align-items: stretch;
+                            justify-content: stretch;
+                        }
+
+                        .footer-mirror-register {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding: clamp(1rem, 2vw, 2rem);
+                            background: linear-gradient(180deg, #fffdf9 0%, #f8f2e8 100%);
+                            border-right: 1px solid #eadfce;
+                        }
+
+                        .footer-mirror-register__header {
+                            margin-bottom: 0.75rem;
+                        }
+
+                        .footer-mirror-register__title {
+                            margin: 0 0 0.3rem;
+                            color: #5b3426;
+                            font-size: clamp(2.4rem, 5vw, 4.6rem);
+                            line-height: 0.98;
+                        }
+
+                        .footer-mirror-register__subtitle {
+                            margin: 0;
+                            color: #7b6a5e;
+                            font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+                            line-height: 1.35;
+                        }
+
+                        .footer-mirror-register__form {
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
+                            min-height: 0;
+                        }
+
+                        .footer-mirror-register__fields {
+                            display: grid;
+                            gap: 0.55rem;
+                        }
+
+                        .footer-mirror-register__input {
+                            width: 100%;
+                            border: 1px solid #d8cbb8;
+                            border-radius: 10px;
+                            padding: 0.68rem 0.8rem;
+                            font-size: 1rem;
+                            color: #5b3426;
+                            background: #fff;
+                        }
+
+                        .footer-mirror-register__input:focus {
+                            outline: 2px solid #e7b183;
+                            outline-offset: 1px;
+                            border-color: #c98a55;
+                        }
+
+                        .footer-mirror-register__submit {
+                            margin-top: auto;
+                            border: 0;
+                            border-radius: 10px;
+                            padding: 0.74rem 0.95rem;
+                            background: #e78745;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            cursor: pointer;
+                        }
+
+                        .footer-mirror-register__disclaimer {
+                            margin: 0.6rem 0 0;
+                            color: #7b6a5e;
+                            font-size: 0.82rem;
+                            line-height: 1.45;
+                        }
+
+                        .footer-mirror__column--right {
+                            background: #7b3d2c;
+                            border-color: #7b3d2c;
+                        }
+
+                        @media screen and (max-width: 991px) {
+                            .footer-mirror {
+                                height: auto;
+                            }
+
+                            .footer-mirror__grid {
+                                grid-template-columns: 1fr;
+                            }
+                        }
+                    </style>
+                </div>
+                <div class="padding-global">
+                    <div class="footer-mirror__grid">
+                        <div class="footer-mirror__column footer-mirror__column--left">
+                            <div class="footer-mirror-register">
+                                <div class="footer-mirror-register__header">
+                                    <h2 class="footer-mirror-register__title">Conference Registration</h2>
+                                    <p class="footer-mirror-register__subtitle">Complete your attendee details to secure your spot.</p>
+                                </div>
+                                <form class="footer-mirror-register__form">
+                                    <div class="footer-mirror-register__fields">
+                                        <input class="footer-mirror-register__input" type="text" name="fullName" placeholder="Full Name" required />
+                                        <input class="footer-mirror-register__input" type="text" name="companyName" placeholder="Company Name" required />
+                                        <input class="footer-mirror-register__input" type="text" name="jobTitle" placeholder="Job Title" required />
+                                        <select class="footer-mirror-register__input" name="seniorityLevel" required>
+                                            <option value="" selected disabled>Seniority Level</option>
+                                            <option value="Managing Partner">Managing Partner</option>
+                                            <option value="Partner">Partner</option>
+                                            <option value="General Counsel">General Counsel</option>
+                                            <option value="Senior Associate">Senior Associate</option>
+                                            <option value="Associate">Associate</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <select class="footer-mirror-register__input" name="lawFirm" required>
+                                            <option value="" selected disabled>Law Firm</option>
+                                            <option value="Bentsi Enchill Letsa and Ankomah">Bentsi Enchill Letsa and Ankomah</option>
+                                            <option value="AB and David Law Firm Ghana">AB and David Law Firm Ghana</option>
+                                            <option value="N. Dowuona and Company">N. Dowuona and Company</option>
+                                            <option value="WTS Nobisfields">WTS Nobisfields</option>
+                                            <option value="Kulendi at Law">Kulendi at Law</option>
+                                            <option value="Africa Legal Associates">Africa Legal Associates</option>
+                                            <option value="ENS Ghana">ENS Ghana</option>
+                                            <option value="Minkah Premo Osei Bonsu Bruce Cathline and Partners">Minkah Premo Osei Bonsu Bruce Cathline and Partners</option>
+                                            <option value="B and P Associates Lawyers Consultants and Notaries Public">B and P Associates Lawyers Consultants and Notaries Public</option>
+                                            <option value="Axis Legal">Axis Legal</option>
+                                            <option value="Zoe Akyea and Company">Zoe Akyea and Company</option>
+                                            <option value="Griffin Legal">Griffin Legal</option>
+                                            <option value="Ntrakwah and Company">Ntrakwah and Company</option>
+                                            <option value="Beyuo and Company">Beyuo and Company</option>
+                                            <option value="Legal Ink Lawyers and Notaries">Legal Ink Lawyers and Notaries</option>
+                                            <option value="Legalstone Solicitors">Legalstone Solicitors</option>
+                                            <option value="Legal Ink Lawyers">Legal Ink Lawyers</option>
+                                            <option value="Clyde and Company Kumasi">Clyde and Company Kumasi</option>
+                                            <option value="Koffie and Partners Law">Koffie and Partners Law</option>
+                                            <option value="Conclave Lawyers">Conclave Lawyers</option>
+                                            <option value="Amoah and Associates Law Firm">Amoah and Associates Law Firm</option>
+                                        </select>
+                                        <select class="footer-mirror-register__input" name="practiceArea" required>
+                                            <option value="" selected disabled>Primary Practice Area</option>
+                                            <option value="Corporate and M&A">Corporate and M&amp;A</option>
+                                            <option value="Tax">Tax</option>
+                                            <option value="Dispute Resolution">Dispute Resolution</option>
+                                            <option value="Banking and Finance">Banking and Finance</option>
+                                            <option value="Energy and Infrastructure">Energy and Infrastructure</option>
+                                            <option value="Real Estate">Real Estate</option>
+                                            <option value="Regulatory and Compliance">Regulatory and Compliance</option>
+                                        </select>
+                                        <input class="footer-mirror-register__input" type="text" name="jurisdiction" placeholder="Bar Admission / Jurisdiction" required />
+                                        <input class="footer-mirror-register__input" type="tel" name="phoneNumber" placeholder="Phone Number" required />
+                                        <input class="footer-mirror-register__input" type="email" name="email" placeholder="Email" required />
+                                        <select class="footer-mirror-register__input" name="attendanceType" required>
+                                            <option value="" selected disabled>Attendance Type</option>
+                                            <option value="Conference Access">Conference Access</option>
+                                            <option value="Conference + VIP Reception">Conference + VIP Reception</option>
+                                            <option value="On-Site Registration">On-Site Registration</option>
+                                        </select>
+                                    </div>
+                                    <button class="footer-mirror-register__submit" type="submit">Register</button>
+                                    <p class="footer-mirror-register__disclaimer">By submitting this form, you confirm that all information provided is accurate and agree to conference admission, verification, and on-site conduct requirements.</p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="footer-mirror__column footer-mirror__column--right"></div>
+                    </div>
+                </div>
+            </section>
 <%- include('../partials/footer') %>
+            <script>
+                (function () {
+                    function syncFooterMirrorHeight() {
+                        var footer = document.getElementById('footer');
+                        var mirror = document.querySelector('.footer-mirror');
+                        if (!footer || !mirror) return;
+                        mirror.style.setProperty('--footer-mirror-height', footer.offsetHeight + 'px');
+                    }
+
+                    window.addEventListener('load', syncFooterMirrorHeight);
+                    window.addEventListener('resize', syncFooterMirrorHeight);
+                })();
+            </script>
 
         </div>
     </div>
@@ -172,3 +389,4 @@
 
 
 </body></html>
+
